@@ -10,8 +10,7 @@ require('dotenv').config();
 const openai = new OpenAI({ apiKey : process.env.OPENAI_API_KEY })
 
 app.use(cors());
-app.use(express.json());
-app.use(express.static('public')); // Serve static files from 'public' directory
+app.use(express.json());// Serve static files from 'public' directory
 
 
 const storage = multer.diskStorage({
