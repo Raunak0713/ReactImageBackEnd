@@ -14,7 +14,7 @@ app.use(express.json());// Serve static files from 'public' directory
 
 
 const storage = multer.diskStorage({
-    destination: './public',
+    destination: './tmp',
     filename: (req, file, cb) => {
         cb(null, Date.now() + "-" + file.originalname);
     }
